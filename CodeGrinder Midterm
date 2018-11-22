@@ -1,0 +1,51 @@
+'''
+Exercise: Drain
+Description
+In this exercise, you will add to your Battery class a method to drain the battery.
+
+Class Name
+Battery
+
+Method
+drain()
+
+Parameters
+self : the Battery object to use
+milliamps : a number, the amount of charge to remove from the battery.
+Action
+Removes milliamps from the charge of the object. If the new charge is less than 0, then set the charge to 0.
+
+Only do this action of milliamps is positive, and the Battery isn't already at 0 charge.
+
+Return Value
+True if a change occurred, False otherwise.
+
+Examples
+b = Battery(3080.)
+b.drain(180.) -> True
+b.getCharge() -> 2900.
+b.drain(0.0) -> False
+b.drain(-1.0) -> False
+b.drain(2800.) -> True
+b.getCharge() -> 100.
+b.drain(150.) -> True
+b.getCharge() -> 0.
+b.drain(1.) -> False
+b.getCharge() -> 0.
+'''
+
+class Battery:
+    def __init__(self,capacity):
+        self.Capacity = capacity
+
+    def getCapacity(self):
+        return self.Capacity
+
+    def getCharge(self):
+        return self.Capacity
+
+    def drain(self, milliamps):
+        if milliamps <= 0:
+            return True
+        else:
+            return False
